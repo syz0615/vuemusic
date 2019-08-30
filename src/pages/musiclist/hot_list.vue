@@ -1,0 +1,29 @@
+<!-- hot_list.vue -->
+<template>
+  <div class="hot_list">
+
+	<MusicList :url="url"/>
+  </div>
+</template>
+
+<script>
+
+import MusicList from "../../components/Music_List"
+
+export default {
+  name: 'Hot_List',
+  components:{
+  	MusicList
+  },
+  data () {
+    return {
+  		url:'/v1/restserver/ting?method=baidu.ting.billboard.billList&type=2&size=5&offset=0'
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
