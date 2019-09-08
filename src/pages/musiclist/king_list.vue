@@ -1,7 +1,7 @@
 <template>
   <div class="king_list">
      
-	<MusicList :url="url"/>
+	<MusicList :url="url" :title="title" :type="type"/>
 
   </div>
 </template>
@@ -17,7 +17,9 @@ export default {
   },
   data () {
     return {
-  		url:'/v1/restserver/ting?method=baidu.ting.billboard.billList&type=21&size=5&offset=0'
+  		url:'/v1/restserver/ting?method=baidu.ting.billboard.billList&type=21&size=5&offset=0',
+      title:'king歌榜',
+      type:'21'
     }
   }
 }

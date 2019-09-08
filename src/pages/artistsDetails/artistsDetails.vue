@@ -1,4 +1,4 @@
-<!-- 歌曲详情 -->
+<!-- 歌手的歌曲详情页面 引入title头像和list歌手的歌曲列表-->
 <template>
   <div class="musicplay">
 	<Title :name="this.$route.params.name" :avatar="this.$route.params.avatar"/>

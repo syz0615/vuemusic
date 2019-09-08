@@ -1,8 +1,8 @@
+<!-- 三种音乐类型的导航 -->
 <template>
   <div class="music-nav">
     <div class="log url hd">
         <h2>音乐榜单</h2>
-        <div>更多</div>
     </div>
     <ul>
       <li>
@@ -29,6 +29,7 @@ export default {
   
     }
   }
+
 }
 </script>
 

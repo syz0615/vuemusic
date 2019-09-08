@@ -2,16 +2,18 @@
 <template>
  <div class="mod-albums">
     <div class="hd log url">
-    <h2>新歌速递</h2>
-	    <div>
-			更多
-	    </div>
+    <h2>{{ title }}</h2>
+    <!-- 点更多跳转 不能是div  接收home的type参数，在morelist中接收musictype-->
+            <!-- 在路由传递的过程中，将type传递给musictype ，将本页面的title传递到更多页面的title-->
+        <router-link :to="{ name:'MoreList', params:{musictype:this.type,title:title}}"  tag="div">
+            更多
+        </router-link> 
     </div>
 
     <div class="container">
    		<div class="gallery">
         	<div class="scroller">
-        	 <router-link tag="div" :to="{name:'MusicPlay',params:{songid:item.song_id}}" class="card url" v-for="(item,index) in todayRecommend" :key="index">
+        	 <router-link tag="div" :to="{name:'MusicPlay',params:{songid:item.song_id}}" class="card url" v-for="(item,index) in newsMusic" :key="index">
 				<div class="album">  <!--alt中是图片的名称，不显示-->
 				 	<img :src="item.pic_big" :alt="item.title">
                     <div class="name">{{ item.title }}</div>
@@ -30,14 +32,25 @@ export default {
   name: 'News_Music',
   data () {
     return {
-  		todayRecommend:[]
+  		newsMusic:[]
     }
   },
+  props:{
+    title:{
+        type:String,
+        default:'新歌速递'
+    },
+    type:{
+        type:String,
+        default:'2'
+    }
+
+  },
   mounted() {
-	 var url = this.HOST + "/v1/restserver/ting?method=baidu.ting.billboard.billList&type=2&size=3&offset=0"
+	 var url = this.HOST + "/v1/restserver/ting?method=baidu.ting.billboard.billList&type="+this.type+" &size=3&offset=0"
 	 this.$axios.get(url)
 	 .then(res=> {
-	 	this.todayRecommend = res.data.song_list;
+	 	this.newsMusic = res.data.song_list;
 	   })
 	 .catch(error=> {
 	   console.log(error)

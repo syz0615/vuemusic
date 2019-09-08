@@ -1,3 +1,4 @@
+<!-- 歌词 -->
 <template>
   <div class="lrcContainer">
 	<div class="lrc" ref="lrc">

@@ -1,9 +1,10 @@
-<!-- home.vue -->
+<!-- home.vue index.vue下面的二级页面-->
 <template>
   <div class="home">
     <!-- home中调用Today_Recommend ，只指定type类型，url地址在Today_Recommend中声明-->
+
      <Today_Recommend title='今日推荐' type='1'/>
-     <News_Music />
+     <News_Music title='新歌速递' type='2' />
      <SwiperBanner />
      <MusicListNav />
 
@@ -11,6 +12,7 @@
      <keep-alive>
         <router-view />
      </keep-alive> 
+     
      <Today_Recommend title='热门歌单' type='24'/>
   </div>
 </template>

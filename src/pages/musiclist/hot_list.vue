@@ -2,7 +2,7 @@
 <template>
   <div class="hot_list">
 
-	<MusicList :url="url"/>
+	<MusicList  :url="url" :title="title" :type="type" />
   </div>
 </template>
 
@@ -17,13 +17,19 @@ export default {
   },
   data () {
     return {
-  		url:'/v1/restserver/ting?method=baidu.ting.billboard.billList&type=2&size=5&offset=0'
+  		url:'/v1/restserver/ting?method=baidu.ting.billboard.billList&type=2&size=5&offset=0',
+      title:'热歌榜',
+      type:'2'
     }
   }
+
+
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
+
+/*样式来自于Music_List.vue*/
 
 </style>

@@ -1,3 +1,4 @@
+<!-- 歌曲的列表 ，在artistsDetails.vue中被引入-->
 <template lang="html">
   <div class="art-list">
     <ul class="list">
@@ -18,7 +19,7 @@ export default {
       listArr:[]
     }
   },
-  props:{
+  props:{   //从artistsDteail传来的歌手id
     ting_uid:{
       type:String,
       default:"0"

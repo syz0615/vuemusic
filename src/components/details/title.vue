@@ -1,3 +1,4 @@
+<!-- 歌手的头像 ，在artistsDetails.vue中被引入-->
 <template lang="html">
   <div class="art-title">
     <div class="artist-header">
@@ -21,7 +22,7 @@ export default {
       arttitle:{}
     }
   },
-  props:{
+  props:{ //接收artistsDteail中的名字和图片
     name:{
       type:String,
       defualt:""
