@@ -26,7 +26,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### 已完成功能：
 1. **首页：** 在首页显示不同的歌曲列表，并可以常查看更多；
-2. **歌手页面：**点击某一个歌手，显示这个歌手的全部音乐；  
+2. **歌手页面：** 点击某一个歌手，显示这个歌手的全部音乐；  
 3. **排行页：** 多种榜单，均可以查看当前榜单的全部音乐； 
 4. **搜索页：** 可搜索歌曲名称和歌手名字； 
 5. **播放页：** 进度条，歌词适配；  
@@ -40,8 +40,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 1. vue : 3.10.0  
 2. webpack : 3.6.0  
 3. node : v10.16.2 
-  
-  百度音乐api接口:转载 https://www.jianshu.com/p/a6718b11fdf1 <br>
+4. 轮播图：https://github.com/surmon-china/vue-awesome-swiper
+5. axios请求： npm  install --save axios
+6. 百度音乐api接口:转载 https://www.jianshu.com/p/a6718b11fdf1 
 
 
 
@@ -67,3 +68,12 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### 在config目录下的index.js加上如下代码，解决跨域问题
 ![](img/解决跨域.PNG)
+
+### 首页
+![](img/首页1.PNG) ![](img/首页2.PNG)
+
+### 榜单页面
+![](img/榜单页面.PNG) ![](img/榜单页面2.PNG)
+
+### 播放页面
+![](img/播放页面.PNG)
